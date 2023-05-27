@@ -1993,6 +1993,16 @@ ul.actions li:first-child {
   opacity: 1;
 }
 
+.fun-link {
+  color:darkviolet;
+}
+
+.fun-link:hover {
+  text-decoration: underline;
+  font-weight: bold; 
+  color:#580380;
+}
+
 /*#nav a:hover {
   opacity: 1;
 }
@@ -2022,12 +2032,30 @@ ul.actions li:first-child {
 
 /*up arrow*/
 .nav-container {
-  padding-bottom: 3%;
+  padding-bottom: 0%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   opacity: 1;
+}
+.arrow-up {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 1vw solid transparent;
+  border-right: 1vw solid transparent;
+
+  border-bottom: 1vw solid white;
+}
+
+.arrow-up-hidden {
+  width: 0;
+  height: 0;
+  border-left: 1vw solid transparent;
+  border-right: 1vw solid transparent;
+
+  border-bottom: 1vw solid transparent;
 }
 
 .service-p {

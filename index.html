@@ -22,17 +22,53 @@
     <div id="wrapper">
       <!-- Nav -->
       <nav id="nav">
+        <script>
+          window.onload=function() {
+            $(".toggle-home").click(function () {
+              $(".arrow-up-home").addClass("arrow-up").removeClass("arrow-up-hidden");
+              $(".arrow-up-math").addClass("arrow-up-hidden").removeClass("arrow-up");
+              $(".arrow-up-service").addClass("arrow-up-hidden").removeClass("arrow-up");
+              $(".arrow-up-oreo").addClass("arrow-up-hidden").removeClass("arrow-up");
+            });
+
+            $(".toggle-math").click(function () {
+              $(".arrow-up-math").addClass("arrow-up").removeClass("arrow-up-hidden");
+              $(".arrow-up-home").addClass("arrow-up-hidden").removeClass("arrow-up");
+              $(".arrow-up-service").addClass("arrow-up-hidden").removeClass("arrow-up");
+              $(".arrow-up-oreo").addClass("arrow-up-hidden").removeClass("arrow-up");
+            });
+
+            $(".toggle-service").click(function () {
+              $(".arrow-up-service").addClass("arrow-up").removeClass("arrow-up-hidden");
+              $(".arrow-up-home").addClass("arrow-up-hidden").removeClass("arrow-up");
+              $(".arrow-up-math").addClass("arrow-up-hidden").removeClass("arrow-up");
+              $(".arrow-up-oreo").addClass("arrow-up-hidden").removeClass("arrow-up");
+            });
+
+            $(".toggle-oreo").click(function () {
+              $(".arrow-up-oreo").addClass("arrow-up").removeClass("arrow-up-hidden");
+              $(".arrow-up-home").addClass("arrow-up-hidden").removeClass("arrow-up");
+              $(".arrow-up-math").addClass("arrow-up-hidden").removeClass("arrow-up");
+              $(".arrow-up-service").addClass("arrow-up-hidden").removeClass("arrow-up");
+            });
+          }
+        </script>
+
         <div class="nav-container">
-          <a href="#" class="nav-link">Home</a>
+          <a href="#home" class="nav-link toggle-home">Home</a>
+          <div class="arrow-up-home arrow-up-hidden"></div>
         </div>
         <div class="nav-container">
-          <a href="#math" class="nav-link">Math</a>
+          <a href="#math" class="nav-link toggle-math">Math</a>
+          <div class="arrow-up-math arrow-up-hidden"></div>
         </div>
         <div class="nav-container">
-          <a href="#service" class="nav-link">Service</a>
+          <a href="#service" class="nav-link toggle-service">Service</a>
+          <div class="arrow-up-service arrow-up-hidden"></div>
         </div>
         <div class="nav-container">
-          <a href="#oreo" class="nav-link">Oreo</a>
+          <a href="#oreo" class="nav-link toggle-oreo">Oreo</a>
+          <div class="arrow-up-oreo arrow-up-hidden"></div>
         </div>
       </nav>
 
@@ -51,10 +87,7 @@
               <b> <span style="color: black">mercai [at] mit [dot] edu.</span></b>
             </p>
           </header>
-          <a href="#math" class="jumplink pic">
-            <span class="arrow icon solid fa-chevron-right"
-              ><span>See my work</span></span
-            >
+          <a class="pic">
             <img src="images/me.jpg" alt="" />
           </a>
           <script>
@@ -68,8 +101,8 @@
           <header>
             <h2>Math</h2>
             <p>
-              I am broadly interested in algebraic geometry and representation
-              theory. and katarina.
+              <span style="color:black">I am broadly interested in algebraic geometry and representation
+              theory.</span>
             </p>
             <hr class="hr-nospace"></hr>
           </header>
@@ -77,30 +110,34 @@
             <h4><u>Publications</u></h4>
               <p><b>Decomposition of Frobenius pushforwards of line bundles on wonderful compactifications. </b><br> 
                 Joint with Vasily Krylov. 2022. <br>
-                <button onclick="window.location.href='https://arxiv.org/abs/2209.01481';">arXiv</button>
-                <button onclick="window.location.href='pdfs/2209.01481.pdf';">PDF</button></p>
+                <button onclick="window.open('https://arxiv.org/abs/2209.01481', '_blank');">arXiv</button>
+                <button onclick="window.open('pdfs/2209.01481.pdf', '_blank');">PDF</button></p>
               <p><b>Factorization of measures and applications to the weak Goldfeld conjecture. </b><br> 
                   2021. <br> 
-                  <button onclick="window.location.href='https://arxiv.org/abs/2108.06034';">arXiv</button>
-                  <button onclick="window.location.href='pdfs/2108.06034.pdf';">PDF</button></p>
+                  <button onclick="window.open('https://arxiv.org/abs/2108.06034', '_blank');">arXiv</button>
+                  <button onclick="window.open('pdfs/2108.06034.pdf', '_blank');">PDF</button></p>
               <p><b>The Hilbert Series of the Irreducible Quotient of the Polynomial
                 Representation of the Rational Cherednik Algebra of Type <i>A</i><sub><i>n</i>−1</sub> in Characteristic <i>p</i> for <i>p</i> | <i>n</i> − 1. </b><br> 
                 Joint with Daniil Kalinov. 2018. <br>
-                    <button onclick="window.location.href='https://arxiv.org/abs/1811.04910';">arXiv</button>
-                    <button onclick="window.location.href='https://www.worldscientific.com/doi/abs/10.1142/S0219498822501912';">JAA</button>
-                    <button onclick="window.location.href='pdfs/1811.04910.pdf';">PDF</button></p></p>
+                    <button onclick="window.open('https://arxiv.org/abs/1811.04910', '_blank');">arXiv</button>
+                    <button onclick="window.open('https://www.worldscientific.com/doi/abs/10.1142/S0219498822501912', '_blank');">JAA</button>
+                    <button onclick="window.open('pdfs/1811.04910.pdf', '_blank');">PDF</button></p></p>
           </section>
           
           <section>
             <h4><u>Notes</u></h4>
+            <ul>
+              <li><p class="service-p">
+              <a class="fun-link" href="pdfs/18_784.pdf" target="_blank">18.784 Paper</a>, Fall 2021. This is an exposition on Chevalley groups, Bruhat-Tits apartments, and Moy-Prasad filtrations, written for a communications in mathematics class.
+              </p></li>
+            </ul>
           </section>
-
           <section>
             <h4><u>Miscellaneous</u></h4>
             <p><b>Understanding opposing predictions of <i>Prochlorococcus</i> in a changing climate. </b><br> 
               Joint with Vincent Bian and Christopher Follett. 2023. <br>
-              <button onclick="window.location.href='https://www.nature.com/articles/s41467-023-36928-9';">Nature Comm.</button>
-              <button onclick="window.location.href='';">PDF</button></p>
+              <button onclick="window.open('https://www.nature.com/articles/s41467-023-36928-9', '_blank');">Nature Comm.</button>
+              <button onclick="window.open('pdfs/s41467-023-36928-9 (2).pdf', '_blank');">PDF</button></p>
           </section>
           <script>
             var current_url = window.location.href;
@@ -118,29 +155,32 @@
             <h4>Classes</h4>
             <ul>
               <li><p class="service-p">
-              18.704 Seminar in Algebra, Undergraduate Assistant, Fall 2022.
+              <a href="https://misti.mit.edu/your-resources/crafting-your-experience/types-programs/global-teaching-labs" target="_blank">MIT Global Teaching Labs</a>, January 2023. I taught combinatorics, probability, and statistics at <a href="https://www.marconionline.edu.it/" target="_blank">Liceo Scientifico e Linguistico G. Marconi</a> in Milan, Italy, for three weeks.
               </p></li>
               <li><p class="service-p">
-              18.701 Algebra I, Undergraduate Assistant, Fall 2020.
+              <a href="https://web.mit.edu/kentv/www/18.704.html" target="_blank">18.704</a> Seminar in Algebra, Undergraduate Assistant, Fall 2022.
+              </p></li>
+              <li><p class="service-p">
+              <a href="http://course18.guide/fall2020_701.html" target="_blank">18.701</a> Algebra I, Undergraduate Assistant, Fall 2020. Professor: Bjorn Poonen.
               </p></li>
             </ul>
           </section>
           <section class="service-section">
             <h4>Mentoring</h4>
             <ul>
-              <li><p class="service-p"><a href="https://math.mit.edu/research/highschool/primes/usa/index.html">MIT PRIMES-USA</a>, 2023. I am mentoring a high school student on a project studying the chromatic algebra and the Temperley-Lieb algebra.</p></li>
-              <li><p class="service-p"><a href="https://math.mit.edu/research/highschool/primes/circle/">MIT PRIMES Circle</a>, Spring 2022. My students, Sophia Hou and Jaeyi Song, learned about group theory and wrote <a href="https://math.mit.edu/research/highschool/primes/circle/documents/2022/Sophia%20&%20Jaeyi.pdf">this paper.</a></p></li>
-              <li><p class="service-p"><a href="https://math.mit.edu/research/highschool/primes/circle/">MIT PRIMES Circle</a>, Spring 2021. My students, Garima Rastogi and Xavier Choe, learned about group theory and wrote <a href="https://math.mit.edu/research/highschool/primes/circle/documents/2021/Choe_Rastogi.pdf">this paper.</a></p></li>
+              <li><p class="service-p"><a href="https://math.mit.edu/research/highschool/primes/usa/index.html" target="_blank">MIT PRIMES-USA</a>, 2023. I am mentoring a high school student on a project studying the chromatic algebra and the Temperley-Lieb algebra.</p></li>
+              <li><p class="service-p"><a href="https://math.mit.edu/research/highschool/primes/circle/" target="_blank">MIT PRIMES Circle</a>, Spring 2022. My students, Sophia Hou and Jaeyi Song, learned about group theory and wrote <a href="https://math.mit.edu/research/highschool/primes/circle/documents/2022/Sophia%20&%20Jaeyi.pdf" target="_blank">this paper</a>.</p></li>
+              <li><p class="service-p"><a href="https://math.mit.edu/research/highschool/primes/circle/" target="_blank">MIT PRIMES Circle</a>, Spring 2021. My students, Garima Rastogi and Xavier Choe, learned about group theory and wrote <a href="https://math.mit.edu/research/highschool/primes/circle/documents/2021/Choe_Rastogi.pdf" target="_blank">this paper</a>.</p></li>
               <li><p class="service-p">MIT 18.S097, January 2021. I served as a mentor to students learning about proof techniques.</p></li>
             </ul>
           </section>
           <section class="service-section">
             <h4>Other</h4>
             <ul>
-              <li><p class="service-p"><a href="https://pk12.mit.edu/activities/splash/">MIT Splash</a>, November 2020. I co-taught a class with Ezra Erives, Ben Wu, and Jerry Zhao on continued fractions.</p></li>
-              <li><p class="service-p"><a href="https://www.pbha.org/programs/chinatown-adventure">PBHA Chinatown Adventure</a>, Summer 2020. I taught a class of middle schoolers from Boston Chinatown following my own curriculum of math, science, English, history, and more.</p></li>
-              <li><p class="service-p"><a href="https://www.learningu.org/current-programs/">LU Rainstorm</a>, May 2020. I co-taught two classes with Phyllis Zhang on random walks and Markov chains. </p></li>
-              <li><p class="service-p"><a href="https://pk12.mit.edu/activities/splash/">MIT Splash</a>, November 2019. I co-taught a class with Michael Diao and Vincent Huang on statistical deception.</p></li>
+              <li><p class="service-p"><a href="https://pk12.mit.edu/activities/splash/" target="_blank">MIT Splash</a>, November 2020. I co-taught a class with Ezra Erives, Ben Wu, and Jerry Zhao on continued fractions.</p></li>
+              <li><p class="service-p"><a href="https://www.pbha.org/programs/chinatown-adventure" target="_blank">PBHA Chinatown Adventure</a>, Summer 2020. I taught a class of middle schoolers from Boston Chinatown following my own curriculum of math, science, English, history, and more.</p></li>
+              <li><p class="service-p"><a href="https://www.learningu.org/current-programs/" target="_blank">LU Rainstorm</a>, May 2020. I co-taught two classes with Phyllis Zhang on random walks and Markov chains. </p></li>
+              <li><p class="service-p"><a href="https://pk12.mit.edu/activities/splash/" target="_blank">MIT Splash</a>, November 2019. I co-taught a class with Michael Diao and Vincent Huang on statistical deception.</p></li>
             </ul>
           </section>
           <script>
